@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="811d20e6-73c6-4e61-abef-8618e80a4b20" name="Default Changelist" comment="" />
+    <list default="true" id="8f4fbcc2-c09d-4fbc-8002-b3d21598189a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +19,12 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="G:\repo" />
-        <option name="mavenHome" value="G:/Little Test1/apache-maven-3.6.0" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../maven/apache-maven-3.6.0" />
         <option name="userSettingsFile" value="G:\maven\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1YFrEu5oAnWsTLRVO17zSMG1P7T" />
+  <component name="ProjectId" id="1YTKIjGyhnDqcpyQ9bAd3r6PRyD" />
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -32,7 +32,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jcart-store-back" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -43,7 +43,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\SoftWare\jcart-administration-back\src\main\java" />
+      <recent name="G:\jcart-administration-back\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -59,52 +59,30 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="JcartAdministrationBackApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="JcartAdministrationBackApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="jcart-administration-back" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.wyf.Administrationback.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.wyf.Administrationback.JcartAdministrationBackApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.wyf.jcartadministrationback.JcartAdministrationBackApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.JcartAdministrationBackApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="811d20e6-73c6-4e61-abef-8618e80a4b20" name="Default Changelist" comment="" />
-      <created>1582549074331</created>
+      <changelist id="8f4fbcc2-c09d-4fbc-8002-b3d21598189a" name="Default Changelist" comment="" />
+      <created>1582961065370</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582549074331</updated>
-      <workItem from="1582549079704" duration="2525000" />
-      <workItem from="1582614972660" duration="6735000" />
+      <updated>1582961065370</updated>
+      <workItem from="1582961071761" duration="241000" />
+      <workItem from="1582962218511" duration="2774000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/io/wyf/Administrationback/controller/ImageController.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

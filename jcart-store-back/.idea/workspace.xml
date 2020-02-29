@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e6ae824-54fd-4c34-b5f2-cce0fdd2e3ea" name="Default Changelist" comment="" />
+    <list default="true" id="38089a3e-e0a7-4c5a-8cb0-c44d2be267f2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +19,12 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="G:\repo" />
-        <option name="mavenHome" value="G:/Little Test1/apache-maven-3.6.0" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../maven/apache-maven-3.6.0" />
         <option name="userSettingsFile" value="G:\maven\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1YFtLmNLsK2vELBjOnZd0OFeHIK" />
+  <component name="ProjectId" id="1YTNUJEgcSKqIpKmI7lNW94atcP" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -35,10 +35,13 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\jcart-store-back\src\main\resources" />
+      <recent name="G:\jcart-store-back\src\main\java\io\wyf" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -57,13 +60,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9e6ae824-54fd-4c34-b5f2-cce0fdd2e3ea" name="Default Changelist" comment="" />
-      <created>1582550116314</created>
+      <changelist id="38089a3e-e0a7-4c5a-8cb0-c44d2be267f2" name="Default Changelist" comment="" />
+      <created>1582962638271</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582550116314</updated>
-      <workItem from="1582550120175" duration="1613000" />
-      <workItem from="1582621597527" duration="2692000" />
+      <updated>1582962638271</updated>
+      <workItem from="1582962644708" duration="2515000" />
+      <workItem from="1582965293798" duration="1179000" />
     </task>
     <servers />
   </component>

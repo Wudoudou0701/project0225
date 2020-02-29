@@ -9,6 +9,7 @@ import io.wyf.jcartadministrationback.dto.out.ProductShowOutDTO;
 import java.util.List;
 
 public interface ProductService {
+
     Integer create(ProductCreateInDTO productCreateInDTO);
 
     void update(ProductUpdateInDTO productUpdateInDTO);
@@ -20,7 +21,5 @@ public interface ProductService {
     Page<ProductListOutDTO> search(Integer pageNum);
 
     ProductShowOutDTO getById(Integer productId);
-
-
 
 }

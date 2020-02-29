@@ -9,6 +9,9 @@
         <module name="jcart-administration-back" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jcart-administration-back" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
