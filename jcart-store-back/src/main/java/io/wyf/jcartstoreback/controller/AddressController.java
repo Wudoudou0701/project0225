@@ -3,6 +3,7 @@ package io.wyf.jcartstoreback.controller;
 import io.wyf.jcartstoreback.dto.in.AddressCreateInDTO;
 import io.wyf.jcartstoreback.dto.in.AddressUpdateInDTO;
 import io.wyf.jcartstoreback.dto.out.AddressListOutDTO;
+import io.wyf.jcartstoreback.dto.out.AddressShowOutDTO;
 import io.wyf.jcartstoreback.po.Address;
 import io.wyf.jcartstoreback.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class AddressController {
         List<AddressListOutDTO> addressListOutDTOS = addresses.stream().map(address -> {
             AddressListOutDTO addressListOutDTO = new AddressListOutDTO();
             addressListOutDTO.setAddressId(address.getAddressId());
-            addressListOutDTO.setContent(address.getContent());
+            addressListOutDTO.setTag(address.getTag());
             addressListOutDTO.setReceiverName(address.getReceiverName());
             addressListOutDTO.setReceiverMobile(address.getReceiverMobile());
             addressListOutDTO.setContent(address.getContent());
@@ -36,6 +37,19 @@ public class AddressController {
         }).collect(Collectors.toList());
 
         return addressListOutDTOS;
+    }
+
+    @GetMapping("/getById")
+    public AddressShowOutDTO getById(@RequestParam Integer addressId){
+        Address address = addressService.getById(addressId);
+        AddressShowOutDTO addressShowOutDTO = new AddressShowOutDTO();
+        addressShowOutDTO.setAddressId(address.getAddressId());
+        addressShowOutDTO.setTag(address.getTag());
+        addressShowOutDTO.setReceiverName(address.getReceiverName());
+        addressShowOutDTO.setReceiverMobile(address.getReceiverMobile());
+        addressShowOutDTO.setContent(address.getContent());
+
+        return addressShowOutDTO;
     }
 
     @PostMapping("/create")
@@ -68,5 +82,6 @@ public class AddressController {
     public void delete(@RequestBody Integer addressId){
         addressService.delete(addressId);
     }
+
 
 }
