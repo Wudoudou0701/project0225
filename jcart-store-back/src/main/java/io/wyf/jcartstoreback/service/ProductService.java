@@ -4,10 +4,13 @@ package io.wyf.jcartstoreback.service;
 import com.github.pagehelper.Page;
 import io.wyf.jcartstoreback.dto.out.ProductListOutDTO;
 import io.wyf.jcartstoreback.dto.out.ProductShowOutDTO;
+import io.wyf.jcartstoreback.po.Product;
 
 public interface ProductService {
 
-    ProductShowOutDTO getById(Integer productId);
+    Product getById(Integer productId);
+
+    ProductShowOutDTO getShowById(Integer productId);
 
     Page<ProductListOutDTO> search(Integer pageNum);
 
