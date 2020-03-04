@@ -1,6 +1,6 @@
 package io.wyf.jcartstoreback.enumeration;
 
-public class OrderStatus {
+public enum OrderStatus {
     ToProcess,
     Processing,
     ToShip,
