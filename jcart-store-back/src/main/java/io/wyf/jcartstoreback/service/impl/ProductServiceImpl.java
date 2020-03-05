@@ -2,6 +2,7 @@ package io.wyf.jcartstoreback.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import io.wyf.jcartstoreback.dao.ProductDetailMapper;
 import io.wyf.jcartstoreback.dao.ProductMapper;
 import io.wyf.jcartstoreback.dto.out.ProductListOutDTO;
@@ -24,7 +25,13 @@ public class ProductServiceImpl implements ProductService {
     private ProductDetailMapper productDetailMapper;
 
     @Override
-    public ProductShowOutDTO getById(Integer productId) {
+    public Product getById(Integer productId) {
+        Product product = productMapper.selectByPrimaryKey(productId);
+        return product;
+    }
+
+    @Override
+    public ProductShowOutDTO getShowById(Integer productId) {
 
         Product product = productMapper.selectByPrimaryKey(productId);
         ProductDetail productDetail = productDetailMapper.selectByPrimaryKey(productId);
@@ -49,6 +56,8 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Page<ProductListOutDTO> search(Integer pageNum) {
-        return null;
+        PageHelper.startPage(pageNum, 10);
+        Page<ProductListOutDTO> page = productMapper.search();
+        return page;
     }
 }

@@ -3,6 +3,7 @@ package io.wyf.jcartadministrationback.service.impl;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import io.wyf.jcartadministrationback.dao.CustomerMapper;
+import io.wyf.jcartadministrationback.dto.in.CustomerSetStatusInDTO;
 import io.wyf.jcartadministrationback.dto.out.CustomerListOutDTO;
 import io.wyf.jcartadministrationback.dto.out.CustomerShowOutDTO;
 import io.wyf.jcartadministrationback.po.Customer;
@@ -17,34 +18,23 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerMapper customerMapper;
 
     @Override
-    public Page<CustomerListOutDTO> search(Integer pageNum) {
-        PageHelper.startPage(pageNum,5);
-        Page<CustomerListOutDTO> search = customerMapper.search(pageNum);
-        return search;
-    }
-
-
-    @Override
-    public void disable(Integer customerId) {
-        Customer customer = new Customer();
-        customer.setCustomerId(customerId);
-        customer.setStatus((byte) 1);
-
-        customerMapper.updateByPrimaryKeySelective(customer);
+    public Page<Customer> search(Integer pageNum) {
+        PageHelper.startPage(pageNum, 10);
+        Page<Customer> page = customerMapper.search();
+        return page;
     }
 
     @Override
-    public CustomerShowOutDTO getById(Integer customerId) {
+    public Customer getById(Integer customerId) {
         Customer customer = customerMapper.selectByPrimaryKey(customerId);
-        CustomerShowOutDTO customerShowOutDTO = new CustomerShowOutDTO();
-        customerShowOutDTO.setCreateTimestamp(customerShowOutDTO.getCreateTimestamp());
-        //customerOut.setDefaultAddress(customer.getDefaultAddressId());
-        customerShowOutDTO.setEmail(customer.getEmail());
-        customerShowOutDTO.setMobile(customer.getMobile());
-        customerShowOutDTO.setRealName(customer.getRealName());
-        customerShowOutDTO.setStatus(customer.getStatus());
-        customerShowOutDTO.setUsername(customer.getUsername());
+        return customer;
+    }
 
-        return customerShowOutDTO;
+    @Override
+    public void setStatus(CustomerSetStatusInDTO customerSetStatusInDTO) {
+        Customer customer = new Customer();
+        customer.setCustomerId(customerSetStatusInDTO.getCustomerId());
+        customer.setStatus(customerSetStatusInDTO.getStatus());
+        customerMapper.updateByPrimaryKeySelective(customer);
     }
 }
