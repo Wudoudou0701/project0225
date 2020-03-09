@@ -24,7 +24,6 @@ import java.util.HashMap;
 @CrossOrigin
 public class CustomerController {
 
-
     @Autowired
     private CustomerService customerService;
 
@@ -154,6 +153,8 @@ public class CustomerController {
         String bcryptHashString = BCrypt.withDefaults().hashToString(12, newPwd.toCharArray());
         customer.setEncryptedPassword(bcryptHashString);
         customerService.update(customer);
+
+        emailPwdResetCodeMap.remove(email);
     }
 
 
