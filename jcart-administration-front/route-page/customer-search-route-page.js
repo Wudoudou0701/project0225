@@ -1,4 +1,4 @@
-Vue.component('jc-customer-search-page', {
+const CustomerSearchRoutePage = {
     template: `
     <div id="app">
         <el-input v-model="username" placeholder="请输入用户名"></el-input>
@@ -120,4 +120,4 @@ Vue.component('jc-customer-search-page', {
                 });
         }
     }
-})
+}
