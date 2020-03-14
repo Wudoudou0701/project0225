@@ -1,16 +1,20 @@
 const CustomerSearchRoutePage = {
     template: `
     <div id="app">
+    
         <el-input v-model="username" placeholder="请输入用户名"></el-input>
         <el-input v-model="realName" placeholder="请输入客户姓名"></el-input>
         <el-input v-model="mobile" placeholder="请输入手机"></el-input>
         <el-input v-model="email" placeholder="请输入邮箱"></el-input>
+        
         <el-select v-model="selectedStatus" placeholder="请选择状态">
             <el-option v-for="item in statuses" :key="item.value" :label="item.label" :value="item.value">
             </el-option>
         </el-select>
+        
         <el-button type="primary" @click="handleSearchClick">搜索</el-button>
         <el-button type="primary" @click="handleClearClick">清空条件</el-button>
+        
         <el-table :data="pageInfo.list" style="width: 100%">
             <el-table-column prop="username" label="客户用户名">
             </el-table-column>
@@ -35,11 +39,14 @@ const CustomerSearchRoutePage = {
             </el-table-column>
             <el-table-column label="操作">
                 <template slot-scope="scope">
+                 <el-button type="primary" size="mini" @click="handleShowClick(scope.$index, scope.row)">详情
+                    </el-button>
                     <el-button type="primary" size="mini" @click="handleUpdateStatus(scope.$index, scope.row)">更新状态
                     </el-button>
                 </template>
             </el-table-column>
         </el-table>
+        
         <el-pagination layout="prev, pager, next" :total="pageInfo.total" @current-change="handlePageChange">
         </el-pagination>
     </div>
@@ -82,6 +89,9 @@ const CustomerSearchRoutePage = {
             console.log('page changed');
             this.pageNum = val;
             this.searchCustomer();
+        },
+        handleShowClick(index, row) {
+            this.$router.push('/customer/show/' + row.customerId);
         },
         handleUpdateStatus(index, row) {
             console.log('update status click');
